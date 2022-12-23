@@ -294,3 +294,174 @@ public class Main {
 	}
 }
 ```
+
+\newpage
+
+> [Lecture 3](https://youtu.be/I5srDu75h_M)
+
+> 23.12.2022
+> Friday
+
+# Conditional Statements
+
+Topics covered
+
+- if, else
+- else if
+- switch
+- break
+
+## if, else
+
+### Syntax
+
+```java
+if (condition){
+
+}
+else {
+
+}
+```
+
+---
+
+Example
+
+### Q. Write a program to identify if a person is an adult.
+
+```java
+import java.util.*;
+
+public class Conditions {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int age = sc.nextInt();
+
+		if (age > 18) {
+			System.out.println("Adult");
+		} else {
+			System.out.println("Not Adult");
+		}
+	}
+}
+```
+
+### Q. Write a program to check if a number is odd or even.
+
+```java
+import java.util.*;
+
+public class Conditions {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int x = sc.nextInt();
+
+		if (x % 2 == 0) {
+			System.out.println("Even");
+		} else {
+			System.out.println("Odd");
+		}
+	}
+}
+```
+
+## else if
+
+### Q. Write a program to know if a is greater of lesser than b.
+
+```java
+import java.util.*;
+
+public class Conditions {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+
+		if (a == b) {
+			System.out.println("Equal");
+		}
+		else if (a > b) {
+			System.out.println("a is greater than b");
+		}
+		else {
+			System.out.println("a is lesser than b")
+		}
+	}
+}
+```
+
+## Switch
+
+### Syntax
+
+```java
+switch (variable) {
+case 1:
+	break;
+case 2:
+	break;
+default:
+
+}
+```
+
+### Q. Using switch write a program to greet in different languages
+
+```java
+import java.util.*;
+
+public class Conditions {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int button = sc.nextInt();
+
+		switch(button) {
+			case 1: System.out.println("hello");
+			break;
+			case 2: System.out.println("namaste");
+			break;
+			case 3: System.out.println("bonjour");
+			break;
+			dafault: System.out.println("Invalid Button");
+		}
+	}
+}
+
+```
+
+### Q. Make a calculator
+
+Make a Calculator. Take 2 numbers (a & b) from the user and an operation as follows : 
+
+- : + (Addition) a + b
+- : - (Subtraction) a - b
+- : * (Multiplication) a * b
+- : / (Division) a / b
+- : % (Modulo or remainder) a % b
+
+Calculate the result according to the operation given and display it to the user.
+
+```java
+
+```
+
+### Q. Ask the user to enter the number of the month & print the name of the month. 
+For eg - For ‘1’ print ‘January’, ‘2’ print ‘February’ & so on.
+
+```java
+
+```
+
+\newpage
+
+> Lecture 4
+
+> 23.12.2022
+> Friday
+
+# 
+
+
+
