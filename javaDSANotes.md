@@ -304,8 +304,7 @@ public class Main {
 
 # Conditional Statements
 
-Topics covered
-
+> Topics covered
 - if, else
 - else if
 - switch
@@ -461,7 +460,171 @@ For eg - For ‘1’ print ‘January’, ‘2’ print ‘February’ & so on.
 > 23.12.2022
 > Friday
 
-# 
+# Loops
 
+> Topics covered
+- for Loop
+- while Loop
+- do while Loop
 
+## For Loop
 
+### Syntax
+
+```java
+for (initialisation; condition; updation) {
+	// do something
+}
+```
+
+- initialisation -> int counter = 0
+- condition -> counter < 100
+- updation -> counter = counter + 2
+
+Example
+
+```java
+public class Loops {
+	public static void main(String args[]) {
+		for (int counter = 0; counter < 100; counter += 1){
+			System.out.println("Hello world")
+		}
+	}
+}
+```
+
+> Note: if any condition is not given 
+> an infinite loop will run
+
+### Q. Print the number from 0 to 10 using for loop
+
+```java
+public class Loops {
+	public static void main(String args[]) {
+		// counter++ => counter = counter + 1
+		for ( int i = 0; i < 11; i ++ ) [
+			System.out.println(i);
+		]
+	}
+}
+```
+
+> **Dry Run** => When analysing code without actually coding
+
+## While Loop
+
+### Syntax
+
+```java
+int i = 0; // initialisation
+
+while(condition){ // condition
+	// do something
+	i++; //updation
+}
+```
+### Q. Print the number from 0 to 10 using while loop
+
+```java
+public class Loops {
+	public static void main(String args[]) {
+		int i = 0;
+		while(i<11){
+			System.out.println(i);
+			i++;
+		}
+	}
+}
+```
+
+## Do While Loop
+
+### Syntax
+
+```java
+int i = 0; // initialisation
+
+do {
+	// do something
+	i++; // updation
+}while(condition) // condition
+```
+
+> In do while loop, the loop is run at least once.
+
+### Q. Print the number from 0 to 10 using do while loop
+
+```java
+public class Loops {
+	public static void main(String args[]) {
+		int i = 0;
+		do { 
+			System.out.println(i);
+			i++;
+		} while(i<11);
+	}
+}
+```
+
+---
+
+## Questions
+
+### Q. Print the sum of first `n` natural numbers.
+
+```java
+import java.util.*;
+
+public class Loops {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+
+		int sum = 0;
+		for(int i=0; i<=n; i++) {
+			sum = sum + i;
+		}
+
+		System.out.println(sum);
+	}
+}
+```
+
+### Q. Print the table if a number input by the user.
+
+```java
+import java.util.*;
+
+public class Loops {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+
+		for(int i=1; i<11; i++) {
+			System.out.println(i*n);
+		}
+
+	}
+}
+```
+
+### Q. Print all even numbers till n.
+
+```java
+
+```
+
+### Q. Make a menu driven program. The user can enter 2 numbers, either 1 or 0.
+
+If the user enters 1 then keep taking input from the user for a student’s marks(out of 100). 
+If they enter 0 then stop.
+If he/ she scores :
+Marks >=90 -> print “This is Good”
+89 >= Marks >= 60 -> print “This is also Good”
+59 >= Marks >= 0 -> print “This is Good as well”
+	Because marks don’t matter but our effort does.
+(Hint : use do-while loop but think & understand why)
+
+```java
+
+```
