@@ -628,3 +628,270 @@ Marks >=90 -> print “This is Good”
 ```java
 
 ```
+
+---
+
+\newpage
+
+> [Lecture 5](https://youtu.be/GjHNGM7KN3w)
+> 25.12.2022
+> Sunday
+
+# Basic Pattern Questions
+
+## Nested Loops
+
+```java
+for(..){
+  for(..){
+
+  }
+}
+```
+
+## Q. Print the solid rectangle pattern
+
+![Solid rectangle pattern](img/2022-12-25-11-11-51.png){ width=150px }
+
+```java
+import java.util.*;
+
+class Patterns {
+	public static void main(String args[]) {
+		int n = 4;
+		int m = 5;
+
+		// inner loop
+		for(int i=1; i<=n; i++) {
+			// inner loop
+			for (int j = 1; j <= m; j++) {
+				System.out.print("*");	
+			}
+			System.out.println();
+		}
+	}
+}
+```
+
+## Q. Print the hollow rectangle pattern
+
+![Hollow rectangle pattern](img/2022-12-25-11-31-34.png){ width=150px }
+
+```java
+import java.util.*;
+
+public class patterns_hollow_rectangle {
+	public static void main(String[] args) {
+		int n = 4;
+		int m = 5;
+
+		// Outer loop
+		for (int i = 1; i <= n; i++) {
+			// Inner loop
+			for (int j = 1; j <= m; j++) {
+				// cell -> (i,j)
+				if (i == 1 || j == 1 || i == n || j == m) {
+					System.out.print("*");
+				} else {
+					System.out.print(" ");
+				}
+				
+			}
+			System.out.println();
+		}
+	}
+}
+```
+
+## Q. Print the half pyramid pattern
+
+![Half pyramid pattern](img/2022-12-25-11-43-22.png){ width=150px }
+
+```java
+import java.util.*;
+
+public class patterns_half_pyramid {
+	public static void main(String[] args) {
+		int n = 4;
+
+		// Outer loop
+		for ( int i = 1; i <= n; i++) {
+			// Inner Loop	
+			for (int j = 1; j <= i; j++ ) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+```
+
+## Q. Print the inverted half pyramid pattern
+
+![Inverted half pyramid pattern](img/2022-12-25-11-53-53.png){ width=150px }
+
+```java
+import java.util.*;
+
+public class patterns_half_pyramid {
+	public static void main(String[] args) {
+		int n = 4;
+
+		// Outer loop
+		for ( int i = n; i >= 1; i--) {
+			// Inner Loop	
+			for (int j = 1; j <= i; j++ ) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+```
+
+## Q. Print the inverted half pyramid pattern (rotated by 180 deg)
+
+![Inverted half pyramid rotated 180 deg](img/2022-12-25-12-01-13.png){ width=150px }
+
+```java
+import java.util.*;
+
+public class patterns_inverted_half_pyramid_180 {
+	public static void main(String[] args) {
+		int n = 4;
+
+		// Outer loop
+		for (int i = 1; i <= n; i++) {
+			// Inner loop	
+			for (int j = 1; j <= n; j++) {
+				if ( j > n - i )
+					System.out.print("*");
+				else
+					System.out.print(" ");
+			}
+			System.out.println();
+		}
+	}
+}
+```
+
+## Q. Print the half pyramid with numbers pattern
+
+![Half pyramid with numbers](img/2022-12-25-12-13-02.png){ width=150px }
+
+```java
+import java.util.*;
+
+public class patterns_half_pyramid_numbers {
+	public static void main(String[] args) {
+		int n = 5;
+
+		// Outer loop
+		for (int i = 1; i <= n; i++) {
+			// Inner loop	
+			for (int j = 1; j <= i; j++) {
+				System.out.print(j);	
+			}
+			System.out.println();
+		}
+	}
+}
+```
+
+## Q. Print the Inverted half pyramid with numbers pattern
+
+![Inverted half pyramid with numbers](img/2022-12-25-12-21-44.png){ width=150px }
+
+```java
+import java.util.*;
+
+public class patterns_inverted_half_pyramid_numbers {
+	public static void main(String[] args) {
+		int n = 5;
+
+		// Outer loop
+		for (int i = 1; i <= n; i++) {
+			// Inner loop
+			for(int j = 1; j <= n-i+1; j++) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+	}
+}
+```
+
+## Q. Print the Floyd's triangle pattern
+
+![Floyd's triangle pattern](img/2022-12-25-12-33-04.png){ width=150px }
+
+```java
+import java.util.*;
+
+public class patterns_floyds_triangle {
+	public static void main(String[] args) {
+		int n = 5;
+		int a = 1;
+		
+		// Outer loop
+		for (int i = 1; i <= n; i++) {
+			// Inner loop
+			for (int j = 1; j <= i; j++) {
+				System.out.print(a);	
+				a++;
+			}	
+			System.out.println();
+		}
+	}
+}
+```
+
+## Q. Print the 0-1 triangle pattern
+
+![0-1 triangle pattern](img/2022-12-25-12-41-43.png){ width=150px }
+
+```java
+import java.util.*;
+
+class Patterns {
+	public static void main(String[] args) {
+		int n = 5;
+		int a = 1;
+
+		// Outer loop
+		for (int i = 1; i <= n; i++) {
+			// Inner loop
+			for (int j = 1; j <= i; j++) {
+				int sum = i+j;
+				if (sum % 2 == 0) { //even
+					System.out.print("1 ");
+				} else { // odd
+					System.out.print("0 ");
+				}
+			}	
+			System.out.println();
+		}
+	}
+}
+```
+
+## Q. Print a solid rhombus pattern
+
+![Solid rhomubs pattern](img/2022-12-25-13-07-44.png){ width=200px }
+
+```java
+```
+
+## Q. Print a number pyramid pattern
+
+![Number pyramid pattern](img/2022-12-25-13-08-53.png){ width=150px }
+
+```java
+```
+
+## Q. Print a palindrome number pyramid pattern
+
+![Palindrome number pyramid pattern](img/2022-12-25-13-10-15.png){width=175px}
+
+```java
+```
