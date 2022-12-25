@@ -5,14 +5,14 @@ author:
 - Chaitanya Shahare
 numbersections: true
 header-includes: |
-	\usepackage{float}
-	\let\origfigure\figure
-	\let\endorigfigure\endfigure 
-	\renewenvironment{figure}[1][2] {
-		\expandafter\origfigure\expandafter[H]
-		} {
-		\endorigfigure
-		}
+  \usepackage{float}
+  \let\origfigure\figure
+  \let\endorigfigure\endfigure 
+  \renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+    } {
+    \endorigfigure
+    }
 ---
 
 \maketitle
@@ -50,9 +50,9 @@ header-includes: |
 
 1. Java Development Kit (JDK)
 1. Code Editor / IDE
-	- VS Code
-	- Intellij
-	- Eclipse
+  - VS Code
+  - Intellij
+  - Eclipse
 
 ### First Code
 
@@ -62,9 +62,9 @@ header-includes: |
 
 ```java
 class FirstClass {
-	public static void main(String args[]) {
-		System.out.println("Hello World");
-	}
+  public static void main(String args[]) {
+    System.out.println("Hello World");
+  }
 }
 ```
 
@@ -94,9 +94,9 @@ void main(){
 
 ```java
 class Main{
-	void main() {
+  void main() {
 
-	}
+  }
 }
 ```
 
@@ -107,7 +107,7 @@ class Main{
 > 22.12.2022
 > Thursday
 
-# Variables in Java | Input Output
+# Variables in Java
 
 ## Output
 
@@ -125,10 +125,10 @@ System.out.print("Hello World");
 package com.apnacollege;
 
 public class Main{
-	public static void main(String[] args) {
-		// Output
-		System.out.print("Hello World");
-	}
+  public static void main(String[] args) {
+    // Output
+    System.out.print("Hello World");
+  }
 }
 ```
 
@@ -141,17 +141,17 @@ System.out.println("Hello world with java");
 ```
 
 - print -> for output on the same line
-	```
-	System.out.print("Hello World");
-	```
+  ```
+  System.out.print("Hello World");
+  ```
 - println -> for output on the next line
-	```
-	System.out.println("Hello world with java");
-	```
+  ```
+  System.out.println("Hello world with java");
+  ```
 - "\\n" ->
-	```
-	System.out.print("Hello World\n");
-	```
+  ```
+  System.out.print("Hello World\n");
+  ```
 
 ### Q. Print the pattern
 
@@ -159,13 +159,13 @@ System.out.println("Hello world with java");
 
 ```java
 public class Main{
-	public static void main(String[] args) {
-		// Output
-		System.out.println("*");
-		System.out.println("**");
-		System.out.println("***");
-		System.out.println("****");
-	}
+  public static void main(String[] args) {
+    // Output
+    System.out.println("*");
+    System.out.println("**");
+    System.out.println("***");
+    System.out.println("****");
+  }
 }
 ```
 
@@ -182,17 +182,17 @@ here,
 
 ```java
 public class Main{
-	public static void main(String[] args) {
-		// Variables
-		String name = "tony stark";
-		int age = 48;
-		double price = 23.25;
-		int a = 25;
-		int b = 1;
+  public static void main(String[] args) {
+    // Variables
+    String name = "tony stark";
+    int age = 48;
+    double price = 23.25;
+    int a = 25;
+    int b = 1;
 
-		b = 20;
-		name = "ironman";
-	}
+    b = 20;
+    name = "ironman";
+  }
 }
 ```
 
@@ -229,8 +229,8 @@ char               2
 boolean            1
 int                4
 long               8
-float 			   4
-double 			   8	
+float          4
+double          8  
 
 
 _Above sizes are for a 64-bit System_
@@ -239,21 +239,21 @@ _Above sizes are for a 64-bit System_
 
 ```java
 public class Main {
-	public static void main(String[] argss) {
-		// Variables
-		int a = 10;
-		int b = 25;
+  public static void main(String[] argss) {
+    // Variables
+    int a = 10;
+    int b = 25;
 
-		int sum = a + b;
-		System.out.println(sum);
+    int sum = a + b;
+    System.out.println(sum);
 
-		int diff = b - a;
-		System.out.println(diff);
+    int diff = b - a;
+    System.out.println(diff);
 
-		int mul = a * b;
-		System.out.println(mul);
+    int mul = a * b;
+    System.out.println(mul);
 
-	}
+  }
 }
 ```
 
@@ -265,16 +265,16 @@ public class Main {
 import java.util.*;
 
 public class Main {
-	public static void main(String[] args) {
-		// Input
-		Scanner sc = new Scanner(System.in);
-		String name = sc.next(); // next() -> for next token ie; next word
-		String name1 = sc.nextLine(); // nextLine() -> for taking a sentence as Input
-		// Similarly
-		// nextInt()
-		// nextFloat()
-		System.out.println(name);
-	}
+  public static void main(String[] args) {
+    // Input
+    Scanner sc = new Scanner(System.in);
+    String name = sc.next(); // next() -> for next token ie; next word
+    String name1 = sc.nextLine(); // nextLine() -> for taking a sentence as Input
+    // Similarly
+    // nextInt()
+    // nextFloat()
+    System.out.println(name);
+  }
 }
 
 ```
@@ -285,13 +285,13 @@ public class Main {
 import java.util.*;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		int sum = a + b;
-		System.out.println(sum);
-	}
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    int sum = a + b;
+    System.out.println(sum);
+  }
 }
 ```
 
@@ -333,16 +333,16 @@ Example
 import java.util.*;
 
 public class Conditions {
-	public static void main(String args[]) {
-		Scanner sc = new Scanner(System.in);
-		int age = sc.nextInt();
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int age = sc.nextInt();
 
-		if (age > 18) {
-			System.out.println("Adult");
-		} else {
-			System.out.println("Not Adult");
-		}
-	}
+    if (age > 18) {
+      System.out.println("Adult");
+    } else {
+      System.out.println("Not Adult");
+    }
+  }
 }
 ```
 
@@ -352,16 +352,16 @@ public class Conditions {
 import java.util.*;
 
 public class Conditions {
-	public static void main(String args[]) {
-		Scanner sc = new Scanner(System.in);
-		int x = sc.nextInt();
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int x = sc.nextInt();
 
-		if (x % 2 == 0) {
-			System.out.println("Even");
-		} else {
-			System.out.println("Odd");
-		}
-	}
+    if (x % 2 == 0) {
+      System.out.println("Even");
+    } else {
+      System.out.println("Odd");
+    }
+  }
 }
 ```
 
@@ -373,21 +373,21 @@ public class Conditions {
 import java.util.*;
 
 public class Conditions {
-	public static void main(String args[]) {
-		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		int b = sc.nextInt();
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    int b = sc.nextInt();
 
-		if (a == b) {
-			System.out.println("Equal");
-		}
-		else if (a > b) {
-			System.out.println("a is greater than b");
-		}
-		else {
-			System.out.println("a is lesser than b")
-		}
-	}
+    if (a == b) {
+      System.out.println("Equal");
+    }
+    else if (a > b) {
+      System.out.println("a is greater than b");
+    }
+    else {
+      System.out.println("a is lesser than b")
+    }
+  }
 }
 ```
 
@@ -398,9 +398,9 @@ public class Conditions {
 ```java
 switch (variable) {
 case 1:
-	break;
+  break;
 case 2:
-	break;
+  break;
 default:
 
 }
@@ -412,20 +412,20 @@ default:
 import java.util.*;
 
 public class Conditions {
-	public static void main(String args[]) {
-		Scanner sc = new Scanner(System.in);
-		int button = sc.nextInt();
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int button = sc.nextInt();
 
-		switch(button) {
-			case 1: System.out.println("hello");
-			break;
-			case 2: System.out.println("namaste");
-			break;
-			case 3: System.out.println("bonjour");
-			break;
-			dafault: System.out.println("Invalid Button");
-		}
-	}
+    switch(button) {
+      case 1: System.out.println("hello");
+      break;
+      case 2: System.out.println("namaste");
+      break;
+      case 3: System.out.println("bonjour");
+      break;
+      dafault: System.out.println("Invalid Button");
+    }
+  }
 }
 
 ```
@@ -473,7 +473,7 @@ For eg - For ‘1’ print ‘January’, ‘2’ print ‘February’ & so on.
 
 ```java
 for (initialisation; condition; updation) {
-	// do something
+  // do something
 }
 ```
 
@@ -485,11 +485,11 @@ Example
 
 ```java
 public class Loops {
-	public static void main(String args[]) {
-		for (int counter = 0; counter < 100; counter += 1){
-			System.out.println("Hello world")
-		}
-	}
+  public static void main(String args[]) {
+    for (int counter = 0; counter < 100; counter += 1){
+      System.out.println("Hello world")
+    }
+  }
 }
 ```
 
@@ -500,12 +500,12 @@ public class Loops {
 
 ```java
 public class Loops {
-	public static void main(String args[]) {
-		// counter++ => counter = counter + 1
-		for ( int i = 0; i < 11; i ++ ) [
-			System.out.println(i);
-		]
-	}
+  public static void main(String args[]) {
+    // counter++ => counter = counter + 1
+    for ( int i = 0; i < 11; i ++ ) [
+      System.out.println(i);
+    ]
+  }
 }
 ```
 
@@ -519,21 +519,21 @@ public class Loops {
 int i = 0; // initialisation
 
 while(condition){ // condition
-	// do something
-	i++; //updation
+  // do something
+  i++; //updation
 }
 ```
 ### Q. Print the number from 0 to 10 using while loop
 
 ```java
 public class Loops {
-	public static void main(String args[]) {
-		int i = 0;
-		while(i<11){
-			System.out.println(i);
-			i++;
-		}
-	}
+  public static void main(String args[]) {
+    int i = 0;
+    while(i<11){
+      System.out.println(i);
+      i++;
+    }
+  }
 }
 ```
 
@@ -545,8 +545,8 @@ public class Loops {
 int i = 0; // initialisation
 
 do {
-	// do something
-	i++; // updation
+  // do something
+  i++; // updation
 }while(condition) // condition
 ```
 
@@ -556,13 +556,13 @@ do {
 
 ```java
 public class Loops {
-	public static void main(String args[]) {
-		int i = 0;
-		do { 
-			System.out.println(i);
-			i++;
-		} while(i<11);
-	}
+  public static void main(String args[]) {
+    int i = 0;
+    do { 
+      System.out.println(i);
+      i++;
+    } while(i<11);
+  }
 }
 ```
 
@@ -576,17 +576,17 @@ public class Loops {
 import java.util.*;
 
 public class Loops {
-	public static void main(String args[]){
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
 
-		int sum = 0;
-		for(int i=0; i<=n; i++) {
-			sum = sum + i;
-		}
+    int sum = 0;
+    for(int i=0; i<=n; i++) {
+      sum = sum + i;
+    }
 
-		System.out.println(sum);
-	}
+    System.out.println(sum);
+  }
 }
 ```
 
@@ -596,15 +596,15 @@ public class Loops {
 import java.util.*;
 
 public class Loops {
-	public static void main(String args[]) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
 
-		for(int i=1; i<11; i++) {
-			System.out.println(i*n);
-		}
+    for(int i=1; i<11; i++) {
+      System.out.println(i*n);
+    }
 
-	}
+  }
 }
 ```
 
@@ -622,7 +622,7 @@ If he/ she scores :
 Marks >=90 -> print “This is Good”
 89 >= Marks >= 60 -> print “This is also Good”
 59 >= Marks >= 0 -> print “This is Good as well”
-	Because marks don’t matter but our effort does.
+  Because marks don’t matter but our effort does.
 (Hint : use do-while loop but think & understand why)
 
 ```java
@@ -634,6 +634,7 @@ Marks >=90 -> print “This is Good”
 \newpage
 
 > [Lecture 5](https://youtu.be/GjHNGM7KN3w)
+
 > 25.12.2022
 > Sunday
 
@@ -657,19 +658,19 @@ for(..){
 import java.util.*;
 
 class Patterns {
-	public static void main(String args[]) {
-		int n = 4;
-		int m = 5;
+  public static void main(String args[]) {
+    int n = 4;
+    int m = 5;
 
-		// inner loop
-		for(int i=1; i<=n; i++) {
-			// inner loop
-			for (int j = 1; j <= m; j++) {
-				System.out.print("*");	
-			}
-			System.out.println();
-		}
-	}
+    // inner loop
+    for(int i=1; i<=n; i++) {
+      // inner loop
+      for (int j = 1; j <= m; j++) {
+        System.out.print("*");  
+      }
+      System.out.println();
+    }
+  }
 }
 ```
 
@@ -681,25 +682,25 @@ class Patterns {
 import java.util.*;
 
 public class patterns_hollow_rectangle {
-	public static void main(String[] args) {
-		int n = 4;
-		int m = 5;
+  public static void main(String[] args) {
+    int n = 4;
+    int m = 5;
 
-		// Outer loop
-		for (int i = 1; i <= n; i++) {
-			// Inner loop
-			for (int j = 1; j <= m; j++) {
-				// cell -> (i,j)
-				if (i == 1 || j == 1 || i == n || j == m) {
-					System.out.print("*");
-				} else {
-					System.out.print(" ");
-				}
-				
-			}
-			System.out.println();
-		}
-	}
+    // Outer loop
+    for (int i = 1; i <= n; i++) {
+      // Inner loop
+      for (int j = 1; j <= m; j++) {
+        // cell -> (i,j)
+        if (i == 1 || j == 1 || i == n || j == m) {
+          System.out.print("*");
+        } else {
+          System.out.print(" ");
+        }
+        
+      }
+      System.out.println();
+    }
+  }
 }
 ```
 
@@ -711,18 +712,18 @@ public class patterns_hollow_rectangle {
 import java.util.*;
 
 public class patterns_half_pyramid {
-	public static void main(String[] args) {
-		int n = 4;
+  public static void main(String[] args) {
+    int n = 4;
 
-		// Outer loop
-		for ( int i = 1; i <= n; i++) {
-			// Inner Loop	
-			for (int j = 1; j <= i; j++ ) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-	}
+    // Outer loop
+    for ( int i = 1; i <= n; i++) {
+      // Inner Loop  
+      for (int j = 1; j <= i; j++ ) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
 }
 ```
 
@@ -734,18 +735,18 @@ public class patterns_half_pyramid {
 import java.util.*;
 
 public class patterns_half_pyramid {
-	public static void main(String[] args) {
-		int n = 4;
+  public static void main(String[] args) {
+    int n = 4;
 
-		// Outer loop
-		for ( int i = n; i >= 1; i--) {
-			// Inner Loop	
-			for (int j = 1; j <= i; j++ ) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-	}
+    // Outer loop
+    for ( int i = n; i >= 1; i--) {
+      // Inner Loop  
+      for (int j = 1; j <= i; j++ ) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
 }
 ```
 
@@ -757,21 +758,21 @@ public class patterns_half_pyramid {
 import java.util.*;
 
 public class patterns_inverted_half_pyramid_180 {
-	public static void main(String[] args) {
-		int n = 4;
+  public static void main(String[] args) {
+    int n = 4;
 
-		// Outer loop
-		for (int i = 1; i <= n; i++) {
-			// Inner loop	
-			for (int j = 1; j <= n; j++) {
-				if ( j > n - i )
-					System.out.print("*");
-				else
-					System.out.print(" ");
-			}
-			System.out.println();
-		}
-	}
+    // Outer loop
+    for (int i = 1; i <= n; i++) {
+      // Inner loop  
+      for (int j = 1; j <= n; j++) {
+        if ( j > n - i )
+          System.out.print("*");
+        else
+          System.out.print(" ");
+      }
+      System.out.println();
+    }
+  }
 }
 ```
 
@@ -783,18 +784,18 @@ public class patterns_inverted_half_pyramid_180 {
 import java.util.*;
 
 public class patterns_half_pyramid_numbers {
-	public static void main(String[] args) {
-		int n = 5;
+  public static void main(String[] args) {
+    int n = 5;
 
-		// Outer loop
-		for (int i = 1; i <= n; i++) {
-			// Inner loop	
-			for (int j = 1; j <= i; j++) {
-				System.out.print(j);	
-			}
-			System.out.println();
-		}
-	}
+    // Outer loop
+    for (int i = 1; i <= n; i++) {
+      // Inner loop  
+      for (int j = 1; j <= i; j++) {
+        System.out.print(j);  
+      }
+      System.out.println();
+    }
+  }
 }
 ```
 
@@ -806,18 +807,18 @@ public class patterns_half_pyramid_numbers {
 import java.util.*;
 
 public class patterns_inverted_half_pyramid_numbers {
-	public static void main(String[] args) {
-		int n = 5;
+  public static void main(String[] args) {
+    int n = 5;
 
-		// Outer loop
-		for (int i = 1; i <= n; i++) {
-			// Inner loop
-			for(int j = 1; j <= n-i+1; j++) {
-				System.out.print(j);
-			}
-			System.out.println();
-		}
-	}
+    // Outer loop
+    for (int i = 1; i <= n; i++) {
+      // Inner loop
+      for(int j = 1; j <= n-i+1; j++) {
+        System.out.print(j);
+      }
+      System.out.println();
+    }
+  }
 }
 ```
 
@@ -829,20 +830,20 @@ public class patterns_inverted_half_pyramid_numbers {
 import java.util.*;
 
 public class patterns_floyds_triangle {
-	public static void main(String[] args) {
-		int n = 5;
-		int a = 1;
-		
-		// Outer loop
-		for (int i = 1; i <= n; i++) {
-			// Inner loop
-			for (int j = 1; j <= i; j++) {
-				System.out.print(a);	
-				a++;
-			}	
-			System.out.println();
-		}
-	}
+  public static void main(String[] args) {
+    int n = 5;
+    int a = 1;
+    
+    // Outer loop
+    for (int i = 1; i <= n; i++) {
+      // Inner loop
+      for (int j = 1; j <= i; j++) {
+        System.out.print(a);  
+        a++;
+      }  
+      System.out.println();
+    }
+  }
 }
 ```
 
@@ -854,44 +855,237 @@ public class patterns_floyds_triangle {
 import java.util.*;
 
 class Patterns {
-	public static void main(String[] args) {
-		int n = 5;
-		int a = 1;
+  public static void main(String[] args) {
+    int n = 5;
+    int a = 1;
 
-		// Outer loop
-		for (int i = 1; i <= n; i++) {
-			// Inner loop
-			for (int j = 1; j <= i; j++) {
-				int sum = i+j;
-				if (sum % 2 == 0) { //even
-					System.out.print("1 ");
-				} else { // odd
-					System.out.print("0 ");
-				}
-			}	
-			System.out.println();
-		}
-	}
+    // Outer loop
+    for (int i = 1; i <= n; i++) {
+      // Inner loop
+      for (int j = 1; j <= i; j++) {
+        int sum = i+j;
+        if (sum % 2 == 0) { //even
+          System.out.print("1 ");
+        } else { // odd
+          System.out.print("0 ");
+        }
+      }  
+      System.out.println();
+    }
+  }
 }
 ```
 
-## Q. Print a solid rhombus pattern
+---
 
-![Solid rhomubs pattern](img/2022-12-25-13-07-44.png){ width=200px }
+\newpage
+
+> [Lecture 6](https://youtu.be/Dr4PpNa7AYo)
+
+> 25.12.2022
+> Sunday
+
+# Advanced Pattern Questions
+
+## Q. Print the butterfly Patterns
+
+![Butterfly pattern](img/2022-12-25-18-47-30.png){ width=170px }
 
 ```java
+import java.util.*;
+
+public class patterns_butterfly {
+  public static void main(String[] args) {
+    int n = 4;
+
+       //upper part
+       for(int i=1; i<=n; i++) {
+           for(int j=1; j<=i; j++) {
+               System.out.print("*");
+           }
+ 
+           int spaces = 2 * (n-i);
+           for(int j=1; j<=spaces; j++) {
+               System.out.print(" ");
+           }
+ 
+           for(int j=1; j<=i; j++) {
+               System.out.print("*");
+           }
+           System.out.println();
+       }
+
+            //lower part
+       for(int i=n; i>=1; i--) {
+           for(int j=1; j<=i; j++) {
+               System.out.print("*");
+           }
+ 
+           int spaces = 2 * (n-i);
+           for(int j=1; j<=spaces; j++) {
+               System.out.print(" ");
+           }
+ 
+           for(int j=1; j<=i; j++) {
+               System.out.print("*");
+           }
+           System.out.println();
+       }
+  }
+}
 ```
 
-## Q. Print a number pyramid pattern
+## Q. Print the solid rhombus Patterns
+
+![Solid rhombus pattern](img/2022-12-25-13-07-44.png){ width=200px }
+
+```java
+import java.util.*;
+
+public class patterns_solid_rhombus {
+  public static void main(String[] args) {
+    int n = 5;
+
+    for ( int i = 1; i <= n ; i++) {
+      // spaces
+      for (int j = 1; j <= n-i; j++) {
+        System.out.print(" ");  
+      }
+
+      // stars
+      for (int j = 1; j <= 5; j++) {
+        System.out.print("*");  
+      }
+      System.out.println();
+    }
+  }
+}
+```
+
+## Q. Print the number pyramid pattern
 
 ![Number pyramid pattern](img/2022-12-25-13-08-53.png){ width=150px }
 
 ```java
+import java.util.*;
+
+public class patterns_number_pyramid {
+  public static void main(String[] args) {
+    int n = 5;
+
+    // Outer loop
+    for (int i = 1; i <= n; i++) {
+      // spaces
+      for (int j = 1; j <= n-i; j++) {
+        System.out.print(" ");
+      }
+      // numbers => print row no., row no. times
+      for (int j = 1; j <= i; j++) {
+        System.out.print(i + " ");
+      }
+      System.out.println();
+    }
+  }
+}
 ```
 
 ## Q. Print a palindrome number pyramid pattern
 
 ![Palindrome number pyramid pattern](img/2022-12-25-13-10-15.png){width=175px}
+
+```java
+import java.util.*;
+
+public class patterns_palindrome_pyramid {
+  public static void main(String[] args) {
+    int n = 5;
+
+    for (int i = 1; i <= n; i++) {
+      // spaces
+      for (int j = 1; j <= n-i; j++) {
+        System.out.print(" ");  
+      }
+
+      // 1st half numbers
+      for (int j = i; j >= 1; j--) {
+        System.out.print(j);  
+      }
+
+      // 2nd half numbers
+      for (int j = 2; j <= i; j++) {
+        System.out.print(j);  
+      }
+      System.out.println();
+    }
+  }
+}
+```
+
+## Q. Print the diamond pattern
+
+![Diamond pattern](img/2022-12-25-20-13-30.png){ width=150px }
+
+```java
+import java.util.*;
+
+public class patterns_diamond {
+  public static void main(String[] args) {
+    int n = 4;
+
+    // upper half
+    for (int i = 1; i <= n; i++) {
+      // spaces  
+      for (int j = 1; j <= n-i; j++) {
+        System.out.print(" ");  
+      }
+
+      // stars
+      for (int j = 1; j <= 2*i-1; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+    // lower half
+    for (int i = n; i >= 1; i--) {
+      // spaces  
+      for (int j = 1; j <= n-i; j++) {
+        System.out.print(" ");  
+      }
+
+      // stars
+      for (int j = 1; j <= 2*i-1; j++) {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+  }
+}
+```
+
+## Print a hollow butterfly
+
+![Hollow butterfly pattern](img/2022-12-25-20-27-37.png){ width=125px }
+
+```java
+```
+
+## Print a hollow rhomubus
+
+![Hollow rhombus pattern](img/2022-12-25-20-29-21.png){ width=100px }
+
+```java
+```
+
+## Print Pascal's triangle
+
+![Pascal's triangle](img/2022-12-25-20-31-03.png){ width=100px }
+
+```java
+```
+
+## Print Inverted half pyramid pattern
+
+![Inverted half pyramid pattern](img/2022-12-25-20-32-52.png){ width=100px }
 
 ```java
 ```
