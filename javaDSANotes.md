@@ -1,5 +1,5 @@
 ---
-title: 
+title:
 - Java Placement Cource (DSA) notes
 author:
 - Chaitanya Shahare
@@ -7,7 +7,7 @@ numbersections: true
 header-includes: |
   \usepackage{float}
   \let\origfigure\figure
-  \let\endorigfigure\endfigure 
+  \let\endorigfigure\endfigure
   \renewenvironment{figure}[1][2] {
     \expandafter\origfigure\expandafter[H]
     } {
@@ -133,6 +133,7 @@ public class Main{
 ```
 
 Here:
+
 - System -> class
 - print -> function
 
@@ -224,13 +225,13 @@ double
 Primitive               Size (in bytes)
 -----------------  --------------------
 byte               1
-short              
+short
 char               2
 boolean            1
 int                4
 long               8
 float          4
-double          8  
+double          8
 
 
 _Above sizes are for a 64-bit System_
@@ -432,7 +433,7 @@ public class Conditions {
 
 ### Q. Make a calculator
 
-Make a Calculator. Take 2 numbers (a & b) from the user and an operation as follows : 
+Make a Calculator. Take 2 numbers (a & b) from the user and an operation as follows :
 
 - : + (Addition) a + b
 - : - (Subtraction) a - b
@@ -446,7 +447,7 @@ Calculate the result according to the operation given and display it to the user
 
 ```
 
-### Q. Ask the user to enter the number of the month & print the name of the month. 
+### Q. Ask the user to enter the number of the month & print the name of the month.
 For eg - For ‘1’ print ‘January’, ‘2’ print ‘February’ & so on.
 
 ```java
@@ -493,7 +494,7 @@ public class Loops {
 }
 ```
 
-> Note: if any condition is not given 
+> Note: if any condition is not given
 > an infinite loop will run
 
 ### Q. Print the number from 0 to 10 using for loop
@@ -558,7 +559,7 @@ do {
 public class Loops {
   public static void main(String args[]) {
     int i = 0;
-    do { 
+    do {
       System.out.println(i);
       i++;
     } while(i<11);
@@ -616,7 +617,7 @@ public class Loops {
 
 ### Q. Make a menu driven program. The user can enter 2 numbers, either 1 or 0.
 
-If the user enters 1 then keep taking input from the user for a student’s marks(out of 100). 
+If the user enters 1 then keep taking input from the user for a student’s marks(out of 100).
 If they enter 0 then stop.
 If he/ she scores :
 Marks >=90 -> print “This is Good”
@@ -666,7 +667,7 @@ class Patterns {
     for(int i=1; i<=n; i++) {
       // inner loop
       for (int j = 1; j <= m; j++) {
-        System.out.print("*");  
+        System.out.print("*");
       }
       System.out.println();
     }
@@ -696,7 +697,7 @@ public class patterns_hollow_rectangle {
         } else {
           System.out.print(" ");
         }
-        
+
       }
       System.out.println();
     }
@@ -717,7 +718,7 @@ public class patterns_half_pyramid {
 
     // Outer loop
     for ( int i = 1; i <= n; i++) {
-      // Inner Loop  
+      // Inner Loop
       for (int j = 1; j <= i; j++ ) {
         System.out.print("*");
       }
@@ -740,7 +741,7 @@ public class patterns_half_pyramid {
 
     // Outer loop
     for ( int i = n; i >= 1; i--) {
-      // Inner Loop  
+      // Inner Loop
       for (int j = 1; j <= i; j++ ) {
         System.out.print("*");
       }
@@ -763,7 +764,7 @@ public class patterns_inverted_half_pyramid_180 {
 
     // Outer loop
     for (int i = 1; i <= n; i++) {
-      // Inner loop  
+      // Inner loop
       for (int j = 1; j <= n; j++) {
         if ( j > n - i )
           System.out.print("*");
@@ -789,9 +790,9 @@ public class patterns_half_pyramid_numbers {
 
     // Outer loop
     for (int i = 1; i <= n; i++) {
-      // Inner loop  
+      // Inner loop
       for (int j = 1; j <= i; j++) {
-        System.out.print(j);  
+        System.out.print(j);
       }
       System.out.println();
     }
@@ -833,14 +834,14 @@ public class patterns_floyds_triangle {
   public static void main(String[] args) {
     int n = 5;
     int a = 1;
-    
+
     // Outer loop
     for (int i = 1; i <= n; i++) {
       // Inner loop
       for (int j = 1; j <= i; j++) {
-        System.out.print(a);  
+        System.out.print(a);
         a++;
-      }  
+      }
       System.out.println();
     }
   }
@@ -869,7 +870,7 @@ class Patterns {
         } else { // odd
           System.out.print("0 ");
         }
-      }  
+      }
       System.out.println();
     }
   }
@@ -903,12 +904,12 @@ public class patterns_butterfly {
            for(int j=1; j<=i; j++) {
                System.out.print("*");
            }
- 
+
            int spaces = 2 * (n-i);
            for(int j=1; j<=spaces; j++) {
                System.out.print(" ");
            }
- 
+
            for(int j=1; j<=i; j++) {
                System.out.print("*");
            }
@@ -920,12 +921,12 @@ public class patterns_butterfly {
            for(int j=1; j<=i; j++) {
                System.out.print("*");
            }
- 
+
            int spaces = 2 * (n-i);
            for(int j=1; j<=spaces; j++) {
                System.out.print(" ");
            }
- 
+
            for(int j=1; j<=i; j++) {
                System.out.print("*");
            }
@@ -949,12 +950,12 @@ public class patterns_solid_rhombus {
     for ( int i = 1; i <= n ; i++) {
       // spaces
       for (int j = 1; j <= n-i; j++) {
-        System.out.print(" ");  
+        System.out.print(" ");
       }
 
       // stars
       for (int j = 1; j <= 5; j++) {
-        System.out.print("*");  
+        System.out.print("*");
       }
       System.out.println();
     }
@@ -1003,17 +1004,17 @@ public class patterns_palindrome_pyramid {
     for (int i = 1; i <= n; i++) {
       // spaces
       for (int j = 1; j <= n-i; j++) {
-        System.out.print(" ");  
+        System.out.print(" ");
       }
 
       // 1st half numbers
       for (int j = i; j >= 1; j--) {
-        System.out.print(j);  
+        System.out.print(j);
       }
 
       // 2nd half numbers
       for (int j = 2; j <= i; j++) {
-        System.out.print(j);  
+        System.out.print(j);
       }
       System.out.println();
     }
@@ -1034,9 +1035,9 @@ public class patterns_diamond {
 
     // upper half
     for (int i = 1; i <= n; i++) {
-      // spaces  
+      // spaces
       for (int j = 1; j <= n-i; j++) {
-        System.out.print(" ");  
+        System.out.print(" ");
       }
 
       // stars
@@ -1047,9 +1048,9 @@ public class patterns_diamond {
     }
     // lower half
     for (int i = n; i >= 1; i--) {
-      // spaces  
+      // spaces
       for (int j = 1; j <= n-i; j++) {
-        System.out.print(" ");  
+        System.out.print(" ");
       }
 
       // stars
