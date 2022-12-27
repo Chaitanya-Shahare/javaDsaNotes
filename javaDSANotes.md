@@ -1090,3 +1090,224 @@ public class patterns_diamond {
 
 ```java
 ```
+
+---
+
+\newpage
+
+> [Lecture 7](https://youtu.be/qcSz4ef9UHA)
+
+> 27.12.2022
+> Tuesday
+
+# Functions & Methods
+
+Functions is a block of code with takes input, 
+performs some operations
+and returns output.
+
+![Function working](img/2022-12-27-19-26-16.png){ width=300px  }
+
+## Syntax
+
+```java
+returnType functionName(type arg1, type arg2 ..){
+  // operations
+}
+```
+
+- returnType -> int, float, String, ...
+  - returnType void -> no return
+- public static -> oops, for now prefix of every function
+- type -> int, float, String, ...
+
+## Q. Print a given name in a function
+
+```java
+import java.util.*;
+
+public class Functions {
+  public static void printMyName(String name) {
+    System.out.println(name);
+    return;
+  }
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);  
+    String name = sc.next();
+
+    printMyName(name); // function is invoked
+  }
+}
+```
+
+## What happens in memory?
+
+- All functions are saved in memory in stack form.
+  - a single unit in a stack is a **stack frame**.
+
+- function no. $\uparrow$ , stack size $\uparrow$
+
+![Functions in memory](img/2022-12-27-19-56-44.png){ width=250px }
+
+- When main function is running is is created in the memory
+- When it invokes some other function that function is created in the memory and saved as a stack
+- When the invoked function is executed it is removed from the memory
+- And after the completion of the main function it is also removed
+- Variables in a particular function are stored in the same stack frame as the function
+
+More about memory in the OOPs Chapter
+
+## Q. Make a function to add 2 numbers and return the sum
+
+```java
+public static void calculateSum(int a, int b) {
+  int sum = a + b;
+  return sum;
+}
+```
+
+## Q. Make a function to multiply 2 numbers and return the product
+
+```java
+public static int calculateProduct(int a, int b) {
+    return a * b;
+}
+```
+
+## Q. Find a factorial of a number
+
+```java
+public static void printFactorial(int n) {
+  if(n<0){
+    System.out.println("Invalid Number");
+    return;
+  }
+
+  int factorial = 1;
+
+  // loop
+  for(int i = n; i >= 1; i--){
+    factorial = factorial * i;
+  }
+}
+```
+
+## Difference between funcions & methods
+
+![Difference b/w functions & methods](img/2022-12-27-22-04-32.png){ width=300px }
+
+- we call functions directly
+- and methods through objects of class
+
+---
+
+\newpage
+
+> [Lecture 8](https://youtu.be/pFPZ83mgH00)
+
+> 27.12.2022
+> Tuesday
+
+# Functions practice questions
+
+> [Link to the pdf document](https://docs.google.com/document/d/1eEv8JMCr_ZBoE5JSsZxdT5Zq53vq388-EIbE_mi7QME/edit)
+
+## Enter 3 numbers from the user & make a function to print their average.
+
+## Write a function to print the sum of all odd numbers from 1 to n.
+
+## Write a function which takes in 2 numbers and returns the greater of those two.
+
+## Write a function that takes in the radius as input and returns the circumference of a circle.
+
+## Write a function that takes in age as input and returns if that person is eligible to vote or not. A person of age > 18 is eligible to vote.
+
+## Write an infinite loop using do while condition.
+
+## Write a program to enter the numbers till the user wants and at the end it should display the count of positive, negative and zeros entered. 
+
+## Two numbers are entered by the user, x and n. Write a function to find the value of one number raised to the power of another i.e. xn.
+
+## Write a function that calculates the Greatest Common Divisor of 2 numbers. (BONUS)
+
+## Write a program to print Fibonacci series of n terms where n is input by user:
+
+0 1 1 2 3 5 8 13 21 ..... 
+In the Fibonacci series, a number is the sum of the previous 2 numbers that came before it. (BONUS)
+
+---
+
+\newpage
+
+> [Lecture 9](https://youtu.be/bQssdSrSGNE)
+
+> 27.12.2022
+> Tuesday
+
+# Basics of Time & Space Complexity
+
+## Time Complexity
+
+> **Relation** between **Input Size** & **Running Time** (operations).
+
+### Example
+
+```java
+public static void main(String args[]){
+  Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+
+  for(int i = 0; i < n; i++) {
+    System.out.println("hello");
+  }
+}
+```
+
+- input n -> time n
+- time complexity $\alpha$ input n
+- Linear relation
+
+### Types of time complexity
+
+1. Best case -> $\Omega()$
+1. Average case -> $\theta()$
+1. Worst case -> $O()$ `bigO`
+
+- We always assume worst case time complexity _i.e;_ $0()$
+
+### Example
+
+```java
+public static void main(String args[]) {
+  Scanner sc = new Scanner(System.in);
+  int n = sc.nextInt();
+
+  for(int i = 0 ; i < n ; i++) {
+    for(int j = 0; j < n; j++) {
+    System.out.println("hello");
+    }
+  }
+}
+```
+![Total time the print operation is done](img/2022-12-27-22-53-16.png){ width=300px }
+
+$$n\times n = n^2$$
+
+worst case time complexity -> $O(n^2)$
+
+### Comparing Time Complexities
+
+Compare  $O(n)$  $O(n^2)$  $O(n^3)$
+-------- ------- --------- ---------
+n=1       1       1         12
+n=2       2       4         8
+n=3       3       9         27
+n=$10^5$ $10^5$  $10^{10}$   $10^{30}$
+          Best    2ndBest   Worst
+
+## Space Complexity
+
+> Space complexity depends on the space the program occupies in the memory.
+
+- input int n -> space complexity constant
+- Array -> space complexity depends on input
