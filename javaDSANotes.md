@@ -230,8 +230,8 @@ char               2
 boolean            1
 int                4
 long               8
-float          4
-double          8
+float              4
+double             8
 
 
 _Above sizes are for a 64-bit System_
