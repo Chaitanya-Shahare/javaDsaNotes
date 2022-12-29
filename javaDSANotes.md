@@ -1311,3 +1311,151 @@ n=$10^5$ $10^5$  $10^{10}$   $10^{30}$
 
 - input int n -> space complexity constant
 - Array -> space complexity depends on input
+
+---
+
+\newpage
+
+> [Lecture 10](https://youtu.be/NTHVTY6w2Co)
+
+> 29.12.2022
+> Thursday
+
+# Introduction to Arrays
+
+- List of same datatype variables.
+- zero-indexed
+
+## Syntax
+
+```java
+type[] arrayName = new type[size];
+```
+
+*or*
+
+```java
+type arrayName[] = {1,2,3,4,5,6};
+```
+
+e.g;
+
+```java
+int[] marks = new int[20];
+```
+
+### for storing
+
+```java
+marks[0] = 92;
+marks[1] = 88;
+```
+
+## Q. Take an array as input from the user.
+
+Search for a given number x and print the index at which it occurs.
+
+```java
+import java.util.*;
+ 
+public class Arrays {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       int size = sc.nextInt();
+       int numbers[] = new int[size];
+ 
+       for(int i=0; i<size; i++) {
+           numbers[i] = sc.nextInt();
+       }
+ 
+       //print the numbers in array
+       for(int i=0; i<arr.length; i++) {
+           System.out.print(numbers[i]+" ");
+       }
+   }
+}
+```
+
+- algorigtm -> **Linear Search**
+
+## Q. Take an array of names as input from the user and print them on the screen
+
+## Q. Find the maximum & minimum number in an array of integers
+
+[HINT : Read about Integer.MIN_VALUE & Integer.MAX_VALUE in Java]
+
+## Q. Take an array of numbers as input and check if it is an array sorted in ascending order
+
+Eg : { 1, 2, 4, 7 } is sorted in ascending order.
+       {3, 4, 6, 2} is not sorted in ascending order.
+
+---
+
+\newpage
+
+> [Lecture 11](https://youtu.be/18Zt5I4S45o)
+
+> 29.12.2022
+> Thursday
+
+# 2-D Arrays
+
+![Matrix representation of 2D array](img/2022-12-29-17-26-12.png){ width=200px }
+
+rows = 3 ; columns = 5
+
+*Total memory consumption of a 2d array = ( rows x cols ) x datatype-size*
+
+## Syntax 
+
+```java
+type[][] arrayName = new type[rows][columns];
+```
+
+eg. 
+
+```java
+int[][] numbers = new int[3][5];
+```
+
+![Position of 2D matrix](img/2022-12-29-17-34-07.png){ width=300px }
+
+## Q. Take a matrix as input from the user
+
+Search for a given number x and print the indices at which it occurs
+
+```java
+public class TwoDArrays {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       int rows = sc.nextInt();
+       int cols = sc.nextInt();
+ 
+       int[][] numbers = new int[rows][cols];
+ 
+       //input
+       //rows
+       for(int i=0; i<rows; i++) {
+           //columns
+           for(int j=0; j<cols; j++) {
+               numbers[i][j] = sc.nextInt();
+           }
+       }
+ 
+       int x = sc.nextInt();
+ 
+       for(int i=0; i<rows; i++) {
+           for(int j=0; j<cols; j++) {
+               //compare with x
+               if(numbers[i][j] == x) {
+                   System.out.println("x found at location (" + i + ", " + j + ")");
+               }
+           }
+       }
+   }
+}
+```
+
+> For more problems refer [this](https://docs.google.com/document/d/1XkI6549bd-qDvcUC88WuOW0ISPfrtm-Tk06pt_I-89I/edit)
+
+
