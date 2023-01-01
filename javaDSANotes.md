@@ -1622,3 +1622,102 @@ public class StringBuilder {
 ```
 
 - time complextity of the above code is $O(n)$
+
+---
+
+\newpage
+
+> [Lecture 13](https://youtu.be/Oud4alVQU4s)
+
+> 01.01.2023
+> Sunday
+
+# Operators
+
+Symbols that tell compiler to perform some opeerations
+
+- operators -> +, -, /, *, ...
+- operands -> a, b, 3, 6, ... (on which the operation is done)
+
+## Types of Operators
+
+### Arithmetic Operators
+
+Binary 				Unary
+--------- 			---------
+  \+ 					++
+  \- 					--
+  \* 					
+  \/ 					
+  \% 					
+
+- A `binaryoperator` B ; eg, A + B
+- A `unaryoperator` ; eg. A++, B--
+
+#### Increment Operators
+
+- Pre Increment -> first change value then use
+- Post Increment -> first use value then change it
+
+Pre Increment 			Post Increment
+-------------- 			----------------
+ ++a 					  a++
+
+Similarly for decrement operators
+
+### Relational Operators
+
+- '=='
+- '!='
+- '>'
+- '<'
+- '>='
+- '<='
+
+### Logical Operators
+
+- && -> Logical AND
+- || -> Logical OR
+- !  -> Logical NOT
+
+### Bitwise Operators
+
+- '&' -> Binary AND
+- '|' -> Binary OR
+- '^' -> Binary XOR
+- '~' -> Binary One's Complement
+- '<<' -> Binary Left Shift
+- '>>' -> Binary Right Shift
+
+### Assignment Operators
+
+- '= ' 
+- '+='
+- '-='
+- '*='
+- '/='
+
+> a = a + b  ; a += b
+
+# Binary Number System (*base 2*)
+
+- Decimal number system -> regular numbers
+
+- 4 to Binary
+
+![4 to binary](img/2023-01-01-14-11-49.png){ width=175px }
+
+![binary to decimal](img/2023-01-01-14-13-07.png){ width=120px }
+
+ - 101 to Decimal
+ 
+![Binary to decimal](img/2023-01-01-14-15-31.png){ width=120px }
+
+![Decimal to binary](img/2023-01-01-14-16-21.png){ width=175px }
+
+## Other systems
+
+- Octal *Base 8*
+- Hexadecimal *Base 16*
+
+
