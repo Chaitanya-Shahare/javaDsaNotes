@@ -1458,4 +1458,167 @@ public class TwoDArrays {
 
 > For more problems refer [this](https://docs.google.com/document/d/1XkI6549bd-qDvcUC88WuOW0ISPfrtm-Tk06pt_I-89I/edit)
 
+---
 
+\newpage
+
+> [Lecture 12](https://youtu.be/vCRD36bG8xQ)
+
+> 01.01.2023
+> Sunday
+
+# Strings
+
+## String Declaration
+
+```java
+public class Strings {
+	pubic static void main(String args[]) {
+		// String Declaration
+		String name = "Tony";
+		String fullName = "Tony Stark";
+		String sentence = "My name is Tony Stark";
+	}
+}
+```
+
+## String input
+
+```java
+public class Strings {
+	pubic static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		String name = sc.nextLine();
+		System.out.println("Your name is : " + name);
+	}
+}
+```
+
+- sc.next -> for word
+- sc.nextLine -> for sentence
+
+## String Functions
+
+### Concatenation
+
+**+**
+
+```java
+String fullName = firstName + " " + lastName
+```
+
+### Length
+
+```java
+.length()
+```
+
+### charAt()
+
+```java
+for(int i=0 ; i < fullName.length() ; i++) {
+	System.out.println(fullName.charAt(i));
+}
+```
+
+### Compare (.compareTo())
+
+```java
+name1.compareTo(name2);
+```
+
+- value of b is more than value of a; value of z is greater than l
+- always use `.compareTo` when comparing strings instead of `==`
+
+### Substring (.substring)
+
+```java
+String sentence = "My name is Tony";
+String name = sentence.substring(11, sentence.length());
+System.out.println(name);
+```
+
+## Strings are immutable
+
+---
+
+\newpage
+
+> Lecture 13
+
+> 01.01.223
+> Sunday
+
+# String Builder
+
+String Builder is a class to make string processing faster
+
+> Strings in Java are *Immutable*
+
+## Declaration
+
+```java
+public class Strings {
+	public static void main(String args[]) {
+		StringBuilder sb = new StringBuilder("Tony");	
+		System.out.println(sb);
+	}	
+}
+```
+
+## StringBuilder functions
+
+### .charAt(index)
+
+### .setCharAt(index, 'char')
+
+```java
+sb.setCharAt(0, "P");
+```
+
+### .insert(index, 'char')
+
+```java
+sb.insert(0, 'S');
+```
+
+### .delete(start, end)
+
+```java
+sb.delete(2,3);
+```
+
+### .append("char")
+
+```java
+sb.append("e")
+```
+
+### .length()
+
+```java
+sb.length()
+```
+
+## Q. Write a program to reverse a string
+
+```java
+public class StringBuilder {
+	public static void main(String args[]){
+		StringBuilder sb = new StringBuilder("hello");
+
+		for(i = 0; i < sb.lenght()/2; i ++){
+			int front = i ;
+			int back = sb.lenght() - 1 - i;
+
+			char frontChar = sb.charAt(front);
+			char backChar = sb.charAt(back);
+
+			sb.setCharAt(front, backChar);
+			sb.setCharAt(back, frontChar);
+		}
+	}
+}
+```
+
+- time complextity of the above code is $O(n)$
