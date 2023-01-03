@@ -1720,4 +1720,56 @@ Similarly for decrement operators
 - Octal *Base 8*
 - Hexadecimal *Base 16*
 
+---
 
+\newpage
+
+> [Lecture 15](https://youtu.be/OSoO8eCEEC8)
+
+> 02.01.2023
+> Monday
+
+# Bit Manipulation
+
+## Revision
+
+- Left Shift -> `N<<i`
+
+![Left Shift working](img/2023-01-02-22-56-09.png){ width=75px }
+
+- Right Shift -> `N>>i`
+
+![Right Shift working](img/2023-01-02-22-57-37.png){ width=75px }
+
+**Concepts Covered**
+
+1. Greatest
+2. Set
+3. Clear
+4. Update
+
+## Get Bit
+
+### Q. Get the 3rd bit (position = 2) of a number n. ( n = 0101 )
+
+> Bit Mask : 1<<it
+> Operation : AND
+
+![ans](img/2023-01-02-23-02-57.png){ width=300px }
+
+```java
+public class Bits {
+	public static void main(String args[]) {
+		int n = 5;
+		int pos = 2;
+		int bitMask = 1<<pos;
+
+		if ((bitMask & n ) == 0 ) {
+			System.out.println("bit was zero");
+		} else {
+			System.out.println("bit was one");
+		}
+
+	}
+}
+```
